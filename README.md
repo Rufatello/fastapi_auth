@@ -22,50 +22,42 @@
 ### 2. Настройка окружения
 
 Создайте файл .env в корневой директории:
-# Database
-POSTGRES_USER=your_username
-POSTGRES_PASSWORD=your_password
-POSTGRES_DB=auth_db
-POSTGRES_HOST=localhost
-POSTGRES_PORT=6432
-
-# JWT
-SECRET_KEY=your-super-secret-key-here
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-
-# Password Hashing
-HASHING_SCHEME=bcrypt
+- **POSTGRES_USER=your_username**
+- **POSTGRES_PASSWORD=your_password**
+- **POSTGRES_DB=auth_db**
+- **POSTGRES_HOST=localhost**
+- **POSTGRES_PORT=6432**
+- **SECRET_KEY=your-super-secret-key-here**
+- **ALGORITHM=HS256**
+- **ACCESS_TOKEN_EXPIRE_MINUTES=30**
+- **HASHING_SCHEME=bcrypt**
 
 ### 3. Установка зависимостей
 
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
+- **python -m venv venv**
+- **source venv/bin/activate  # Linux/Mac**
 # или
-venv\Scripts\activate     # Windows
+- **venv\Scripts\activate     # Windows**
 
-pip install -r requirements.txt
+- **pip install -r requirements.txt**
 
-### 4. Запуск базы данных
+### 4. 🐳 Запуск базы данных в Docker контейнере:
 
-🐳 Docker
-База данных запускается в Docker контейнере:
 # Запуск
-docker-compose up -d
+- **docker-compose up -d**
 
 # Остановка
-docker-compose down
+- **docker-compose down**
 
-### 5. Применение миграций
+### 5. 🔧 Применение миграций
 
-🔧 Миграции базы данных
-alembic upgrade head
+- **alembic upgrade head**
 
 ### 6. Запуск приложения
 
-uvicorn main:app --reload
+- **uvicorn main:app --reload**
 
 📚 Документация API
 После запуска приложения доступна автоматическая документация:
 
-Swagger UI: http://localhost:8000/docs
+- **Swagger UI: http://localhost:8000/docs**
