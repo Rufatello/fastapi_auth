@@ -15,10 +15,8 @@
 
 ## 📦 Установка и запуск
 
-### 1. Клонирование репозитория
 
-```bash
-git clone 
+git clone https://github.com/Rufatello/fastapi_auth.git
 cd fastapi_auth
 
 ### 2. Настройка окружения
